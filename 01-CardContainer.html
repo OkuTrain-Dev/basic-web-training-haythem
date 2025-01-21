@@ -1,11 +1,80 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>title</title>
+    <title>Title</title>
+    <link rel="stylesheet" href="css/01-CardContainer.css">
 </head>
 <body>
+<div>
+    <img src="images/visual-ex.png" alt="bg" class="object-cover -z-index-9999 fixed w-full h-screen">
+    <div class="flex justify-center align-center w-full h-screen">
+        <div class="rounded-2xl bg-alpha-white rounded-2xl card-container-size blur p-10 box-border">
+            <div class="text-xl font-bold mb-2">Popular Collections</div>
+            <div class="flex justify-start">
+                <div class="rounded-xl bg-alpha-white p-2 mr-2">Profile</div>
+                <div class="rounded-xl bg-alpha-white p-2 mr-2">New York</div>
+                <div class="rounded-xl bg-alpha-white p-2 mr-2">Relaxing</div>
+                <div class="rounded-xl bg-alpha-white p-2 mr-2">Person</div>
+                <div class="rounded-xl bg-alpha-white p-2 mr-2">Fashion</div>
+            </div>
+
+            <div class="flex justify-center align-center flex-wrap infoCard-Container-size overflow-y-scroll m-4">
+                <div class="infoCard-size bg-white rounded-2xl p-4 mr-6 mb-4 pb-2 box-border">
+                    <img src="images/pixiv/72175872_p0_clip.png" alt="item" class="rounded-2xl">
+                    <div class="grid grid-cols-3 gap-3">
+                        <div class="bg-gray-3 small-card rounded-xl"></div>
+                        <div class="bg-gray-2 small-card rounded-xl"></div>
+                        <div class="bg-gray-1 small-card rounded-xl"></div>
+                    </div>
+                    <div class="flex justify-between mt-2">
+                        <div class="font-bold">test01</div>
+                        <div class="font-bold">120</div>
+                    </div>
+                </div>
+
+                <div class="infoCard-size bg-white rounded-2xl p-4 mr-6 mb-4 pb-2 box-border">
+                    <img src="images/pixiv/66349124_p0_6比10.png" alt="item" class="rounded-2xl">
+                    <div class="grid grid-cols-3 gap-3">
+                        <div class="bg-gray-3 small-card rounded-xl"></div>
+                        <div class="bg-gray-2 small-card rounded-xl"></div>
+                        <div class="bg-gray-1 small-card rounded-xl"></div>
+                    </div>
+                    <div class="flex justify-between mt-2">
+                        <div class="font-bold">test02</div>
+                        <div class="font-bold">166</div>
+                    </div>
+                </div>
+
+                <div class="infoCard-size bg-white rounded-2xl p-4 mr-6 mb-4 pb-2 box-border">
+                    <img src="images/pixiv/73205854_p0.jpg" alt="item" class="rounded-2xl">
+                    <div class="grid grid-cols-3 gap-3">
+                        <div class="bg-gray-3 small-card rounded-xl"></div>
+                        <div class="bg-gray-2 small-card rounded-xl"></div>
+                        <div class="bg-gray-1 small-card rounded-xl"></div>
+                    </div>
+                    <div class="flex justify-between mt-2">
+                        <div class="font-bold">test02</div>
+                        <div class="font-bold">166</div>
+                    </div>
+                </div>
+
+                <div class="infoCard-size bg-white rounded-2xl p-4 mr-6 mb-4 pb-2 box-border">
+                    <img src="images/pixiv/73280293_p01080p.png" alt="item" class="rounded-2xl">
+                    <div class="grid grid-cols-3 gap-3">
+                        <div class="bg-gray-3 small-card rounded-xl"></div>
+                        <div class="bg-gray-2 small-card rounded-xl"></div>
+                        <div class="bg-gray-1 small-card rounded-xl"></div>
+                    </div>
+                    <div class="flex justify-between mt-2">
+                        <div class="font-bold">test02</div>
+                        <div class="font-bold">166</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
