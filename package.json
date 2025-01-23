@@ -1,0 +1,13 @@
+{
+  "name": "haythem-training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "unocss": "^65.4.3"
+  }
+}
