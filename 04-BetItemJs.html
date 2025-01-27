@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <div>
+        <span>角色清单：</span>
+        <span id="roleText"></span>
+    </div>
+    <div>
+        <span>结果：</span>
+        <span id="resultText"></span>
+    </div>
+
+</div>
+<button id="betBtn">开始抽奖</button>
+
+<script>
+    const roles = ['genji', 'tracer', 'mercy', 'moira', 'doomfist']
+
+    function betRole() {
+        let result = []
+
+        while (result.length < 3) {
+            let randomNum = Math.floor(Math.random() * roles.length)
+            if (!result.includes(roles[randomNum])) {
+                result.push(roles[randomNum])
+            }
+        }
+
+        return result
+    }
+
+    const roleTextDom = document.getElementById('roleText')
+    const betBtnDom = document.getElementById('betBtn')
+    const resultTextDom = document.getElementById('resultText')
+
+    roleTextDom.innerText = roles.join(",")
+
+    betBtnDom.onclick = () => {
+        resultTextDom.innerText = betRole().join(",")
+    }
+
+</script>
+
+</body>
+</html>
