@@ -3,30 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+    </style>
 </head>
 <body>
 <div>
-    <div>
-        <label for="emailText">邮箱：</label>
-        <input type="email" name="email" id="emailText">
+    <img class="w-full h-screen object-cover fixed -z-9999" src="images/visual.png" alt="background">
 
-        <label for="usernameText">用户名：</label>
-        <input type="text" name="username" id="usernameText">
+    <div class="flex justify-center items-center w-full h-screen">
+        <div class="rounded-md bg-white overflow-hidden box-border px-10 py-5 shadow-lg">
+            <div class="flex flex-col">
+                <div class="text-center mb-5">
+                    <div class="font-bold mb-1">Login System</div>
+                    <div class="color-gray-3 text-xs" id="resultText">Welcome back! Please login or register</div>
+                </div>
+                <div class="flex mb-3 items-center">
+                    <label class="w-100px text-right text-xs pr-2" for="emailText">Email:</label>
+                    <input class="w-full text-xs rounded border-solid border-gray-2 border p-1 outline-none focus:border-purple-3 transition-colors"
+                           type="email" name="email" id="emailText">
+                </div>
+                <div class="flex mb-3 items-center">
+                    <label class="w-100px text-right text-xs pr-2" for="usernameText">Username:</label>
+                    <input class="w-full text-xs rounded border-solid border-gray-2 border p-1 outline-none focus:border-purple-3 transition-colors"
+                           type="text" name="username" id="usernameText">
+                </div>
+                <div class="flex mb-3 items-center">
+                    <label class="w-100px text-right text-xs pr-2" for="passwordText">Password:</label>
+                    <input class="w-full text-xs rounded border-solid border-gray-2 border p-1 outline-none focus:border-purple-3 transition-colors"
+                           type="password" name="password" id="passwordText">
+                </div>
+            </div>
 
-        <label for="passwordText">密码：</label>
-        <input type="password" name="password" id="passwordText">
+            <div class="flex flex-col mt-4">
+                <button class="rounded border-solid border p-1 text-xs border-gray-2 hover:border-purple-3 transition-colors bg-white mb-2"
+                        id="registerBtn">Register
+                </button>
+                <button class="rounded border-solid border p-1 text-xs border-gray-2 hover:border-purple-3 transition-colors bg-white mb-2"
+                        id="loginBtn">Login
+                </button>
+                <button class="rounded border-solid border p-1 text-xs border-gray-2 hover:border-purple-3 transition-colors bg-white mb-2"
+                        id="viewUserListBtn">View user list (console)
+                </button>
+            </div>
+        </div>
     </div>
-    <div style="margin-bottom: 2rem">
-        <span>结果：</span>
-        <span id="resultText"></span>
-    </div>
-    <div>
-        <span>用户名单：</span>
-        <span id="userListText"></span>
-    </div>
-    <button id="registerBtn">注册</button>
-    <button id="loginBtn">登陆</button>
-    <button id="viewUserListBtn">查看用户名单</button>
 </div>
 
 

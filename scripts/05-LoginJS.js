@@ -11,33 +11,31 @@ const resultTextDom = document.getElementById('resultText')
 
 function register(email, username, password) {
     if (userList.find(user => user.email === email)) {
-        resultTextDom.innerText = "用户已存在"
+        resultTextDom.innerText = "User already exists!"
         return
     }
 
     let user = new User(email, username, password)
     userList.push(user)
-    resultTextDom.innerText = "注册成功"
+    resultTextDom.innerText = "User registered successfully!"
 }
 
 function login(email, password) {
     let user = userList.find(user => user.email === email)
     if (!user) {
-        resultTextDom.innerText = "用户不存在"
+        resultTextDom.innerText = "User not found!"
         return
     }
     if (user.password !== password) {
-        resultTextDom.innerText = "密码错误"
+        resultTextDom.innerText = "Password incorrect!"
         return
     }
-    resultTextDom.innerText = `欢迎回来 ${user.username}`
+    resultTextDom.innerText = `Welcome back~ User ${user.username}`
 }
 
 function viewUserList() {
-    const userListText = document.getElementById('userListText');
-    userListText.innerHTML = ''
     userList.forEach(item => {
-        userListText.innerHTML += `<div>用户名：${item.username} 邮箱：${item.email} 密码：${item.password}</div>`
+        console.log(`username：${item.username} email：${item.email} password：${item.password}`)
     })
 }
 
